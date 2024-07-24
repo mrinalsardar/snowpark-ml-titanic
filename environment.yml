@@ -1,0 +1,15 @@
+# Snowpark environment file
+# https://docs.snowflake.com/en/developer-guide/snowpark/python/setup.html
+
+name: snowpark
+channels:
+  - snowflake
+dependencies:
+  - python=3.9
+  - openssl=3.0.9
+  - conda-forge::charset-normalizer
+  - snowflake-ml-python
+  - pip
+  - pip:
+      - "-r requirements.txt"
+      - "--editable ."
